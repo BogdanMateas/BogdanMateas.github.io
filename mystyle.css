@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f6f7f8;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+
+    }
+}
+
+.image {
+    width: 40px;
+    height: 32px;
+}
+
+.list {
+    list-style: none;
+    margin-left: -40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #1f2a4b;
+    font-weight: bold;
+    border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 14.4px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list:hover {
+    cursor: pointer;
+}
+
+.active-list {
+    color: #4a77e5;
+}
+
+
+
+.todo-lists {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-top: 40px;
+    width: 440px;
+    padding-bottom: 60px;
+
+}
+
+.todo-tasks {
+    display: none;
+    /*here maybe is better flex, and in the render fct none*/
+    ;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-top: 40px;
+    width: 440px;
+    padding-bottom: 60px;
+
+}
+
+.tasks-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+a {
+    color: #4a77e5;
+}
+
+.heading {
+    color: #1f2a4b;
+    font-size: 22px;
+    height: 1px;
+    margin-top: 25px;
+}
+
+.inputs {
+    font-size: 16px;
+    width: 330px;
+    height: 28px;
+    border-bottom: #4a77e5 solid 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 4px;
+    opacity: 0.8;
+    margin-bottom: 26px;
+    border-bottom: #9ea3b2 solid 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+.inputs:focus {
+    outline: none;
+}
+
+
+.form-section {
+    margin-top: 35px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.form-section>div {
+    margin-bottom: 14px;
+}
+
+
+.task {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1f2a4b;
+    font-weight: bolder;
+    margin-left: -18px;
+}
+
+.task input {
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.task:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.task input:checked~.checkmark {
+    background-color: #4a77e5;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.task input:checked~.checkmark:after {
+    display: block;
+}
+
+.task .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.active {
+    text-decoration: none;
+    color: #1f2a4b;
+
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

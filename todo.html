@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script defer src="myscript.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-lists">
+            <img src="group.png" class="image">
+            <h4 class="heading">Todo lists</h4>
+            <form action="" data-new-list-form>
+                <input type="text" autocomplete="off" class="inputs" placeholder="Add a new Todo list"
+                    data-new-list-input>
+            </form>
+            <ul data-lists></ul>
+        </div>
+        <div class="todo-tasks" data-list-display-container>
+            <img src="group.png" class="image">
+            <h4 class="heading">Todo tasks</h4>
+            <div class="form-section" action="" method="GET">
+                <form action="" data-new-task-form>
+                    <input type="text" autocomplete="off" class="inputs" placeholder="Add a new Todo task"
+                        data-new-task-input>
+                </form>
+                <div class="tasks-div" data-tasks></div>
+            </div>
+            <div>
+                <span>Show:</span>
+                <a class="active" href="#" data-list-all-tasks>All</a>
+                <a href="#" data-list-completed-tasks>Completed</a>
+                <a href="#" data-list-incompleted-tasks>Incompleted</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
